@@ -6,8 +6,13 @@ def first_view(request):
     html = f"""
     
     <h1>Tashkent Information Technology University Fergana Branch</h1>
-    <a href="/teachers/"> TEACHERS >> </a><br>
+    <a href="/teachers/"/> TEACHERS >> </a><br>
     <a href="/students/"> STUDENTS >> </a><br>
+    <a href="/students/"> FACULTY >> </a><br>
+    <a href="/students/"> COURSES >> </a><br>
+    <a href="/students/"> FINANCE >> </a><br>
+    <a href="/students/"> RESOURCE >> </a><br>
+    <a href="/students/"> REPORTS >> </a><br>
     <!--<a href="/"> FIRST PAGE << </a> this is a comment -->
     """
 
@@ -37,6 +42,6 @@ def pages(request, page):
         """
 
     else:
-        html = "<h1>PAGE NOT FOUND</h1><a href="/"> << FIRST PAGE</a>"
+        html = '<h1>PAGE NOT FOUND</h1><a href="/"> << FIRST PAGE</a>'
 
     return HttpResponse(html)
