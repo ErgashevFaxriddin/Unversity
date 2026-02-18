@@ -1,3 +1,4 @@
+from django.utils import timezone
 from django.db import models
 from django.forms import CharField
 from django.utils.text import slugify
@@ -42,3 +43,10 @@ class Subjects(models.Model):
         return self.name.title()
 
 
+class Finance(models.Model):
+    name = models.CharField(max_length=100)
+    lastname = models.CharField(max_length=100)
+    condition = models.CharField(max_length=50)
+    course = models.SmallIntegerField()
+    major = models.CharField(max_length=150)
+    students = models.ForeignKey(Students, null=True, on_delete=models.CASCADE)
